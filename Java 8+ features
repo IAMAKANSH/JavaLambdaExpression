@@ -1,0 +1,185 @@
+Java 8+ features
+
+What's the difference between imperative and declarative programming?
+
+1.With imperative programming,you tell,how you want to happen,step by step[how]
+
+For example::
+Went to a shop to buy lamp
+->you need to go to counter and ask where i can find lamp in the store
+->you follow his/her direction and walk there
+->bring that mapl to counter
+->get it billing done
+
+
+Declarative programming is when you say what you want but not necessaily how to get it.[what]
+
+->consider same example
+->I want to buy a lamp
+
+
+Take example of sql query-->>
+
+Select * from Employee where  employee_id=1;
+This is what called declarative approach
+as im describing what i want to achieve without instructing how to do it
+
+
+Take another example::
+<html>
+	<header>
+		<h1>Imperative vs Declarative programmming</h1>
+		<p>Declarative programming sounds smarter</p>
+		</header>
+</html> 
+
+
+
+Java 8 introduced declarative style using functional programming using lambda expression
+
+A java developer must also be able to think and code using the declarative functional paradigm.
+
+Java 9-13 new features are introduced in lambda and functional programming
+
+Check LearningJava8AboveFeatures code base for more example
+
+
+
+What is lambda Expression??
+
+new feature of java 8
+
+lambda expression is an anonymous function. Its a function without a name and does not belong to any class
+
+
+Lambda vs Java method
+
+A method<or function> in java has these main parts:::
+
+Name
+Parameter List
+Body
+return type
+Example::
+
+public static void main(String args[])
+
+
+A lambda expression in java has these main parts::
+
+No name::as this is an anonymous function there is no name needed
+Parameter list
+Body::This is the main part of the function.
+No return::You dont neeed to mention the return type in lambda expression.The java 8+ complier is able to infer the return type by checking the code.
+
+
+(	)	->	{	}--Lambda body
+
+lambda  Arrow
+Input	[Denoting lambda]	
+parameter 
+
+
+
+Using of lambda?
+
+lambda is mainly used to implement functional interfaces.Any interface with SAM(Single abstract method) is a functional interface and its implementation may be treated as lambda expressions.
+
+Functional Inteface
+
+
+@FunctionalInterface
+public interface Runnable{
+	
+	public abstract void run();
+}
+
+@FunctionalInterface
+public interface Comparator(T){
+	int comare(T o1,T o2);
+}
+
+
+@FunctionalInterface
+public interface Callable<V>{
+	
+	V call()throws Exception;
+}
+
+Java Functional Interface is introduced in java 8
+
+Functional Interface in Java is a interface that contains only  a single abstract method which is unimplemented.
+
+A functional interface can contain default and static methods which do have an implementation in additional to the single unimplemented method
+
+
+For Example
+
+@FunctionalInterface
+public interface MyFunctionalInterface{
+	
+	public void subString();//abstract method
+
+
+	public default void print(String text)
+	{
+		sout(text);
+	}
+	public static void print(String text1,String text2)
+	{
+		sout(text1+" "+text2)
+	}
+}
+Check Code base
+
+Some of the usesful java 8 functional interfaces are::
+
+Consumer[one argument]::
+	1.DoubleConsumer
+	2.IntConsumer
+	3.LongConsumer
+	4.BiConsumer[two arguments]
+
+
+Supplier::
+1.IntSupplier
+2.DoubleSupplier
+3.LongSupplier
+
+
+Functions::
+	1.BiFunctons
+	2.UnaryOperators
+	3.BinaryOperators
+
+Predicate::
+	IntPredicate
+	DoublePredicate
+	LongPredicate
+	BiPredicate
+
+
+
+Consumer Functional Interface
+
+-->>part of java.util.function package
+-->>introduced in java 8.It is used to implement functional programming in java
+-->>It represent to a function which takes in one argument and produces a result
+
+BiConsumer Functional Interface
+
+-->>part of java.util.function package
+-->>introduced in java 8.It is used to implement functional programming in java
+-->>It represent to a function which takes in one argument and produces a result
+-->>It does not return any result
+
+
+Predicate Functional Interface
+
+Java 8 predicate are functional interface introduced in java 8
+Predicate is single argument which returns true or false
+predicate has test method which returns true or false
+
+
+
+
