@@ -1,6 +1,6 @@
 package functionalInterface;
 
-public class Barcelona implements FootballClubInterface{
+public class BarcelonaTraditional implements FootballClubInterface{
     @Override
     public String getFootballClubName() {
         return "FC Barcelona";
@@ -8,7 +8,7 @@ public class Barcelona implements FootballClubInterface{
 
     public static void main(String[] args) {
 
-        Barcelona bc=new Barcelona();
+        BarcelonaTraditional bc=new BarcelonaTraditional();
         System.out.println(bc.getFootballClubName());
     }
 }
