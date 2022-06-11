@@ -1,0 +1,33 @@
+What is volatile
+
+volatile keyword in Java is used as a indicator toJava compiler  and thread that do not cache value of this variable
+and always read it from the main memory
+
+                Main Memory
+
+            variable variable variable variable variable
+
+
+    Cache v v v v v
+        CPU 1
+        Thread 1              Cache v v v v v
+                                      CPU 2
+                                      Thread 2
+                thread Engine
+
+
+1.variable can be defined as volatile method and classes cannot be volatile
+2.Volatile keywords guarantee that the variable will be read from main meonory and not from the thread local cache
+3.In java reads and write are atomic for all the variables declared volatile
+4. If the variable is not used dont use volatile
+7.Cache is faster than ram
+
+Question1 ::
+
+In the scenario where one thread is writing to a variable and other thread is just reading
+volatile help in the correct visibility of the value of the varibale.
+But volatile is not enough in many threads are reading anf writing the value of shared variable
+in that case because of race condition thread will still get wrong value
+
+
+

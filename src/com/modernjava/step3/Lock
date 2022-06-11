@@ -1,0 +1,29 @@
+Lock is athread synchronization mechanism like synchronized blocks except lock can be more
+sophisticated than java synchronized blocks
+
+Since lock is an interface we need to use one of its implementation to use locks in application
+ReentrantLock is one such implementation of lock interface
+
+
+Lock interface vs synchronized
+
+1.synchronized block dont provide timeout
+Using Lock.tryLock(long timeout ,TimeUnit timeUnit) it is possible
+2.synchronized block must be fully implemented in single method A lock can have its call to lock in one method
+and unlock in other method
+
+
+ReentrantLock
+
+1.Reentrant lock allow thread to enter into lock on a resource more than once
+2.When the thread first enters into lock a hold count is set to one
+3.Before unlocking the thread can reenter into lock again and every time hold count is incremented by one
+4.For every unlock request hold count is decremented by one and when the hold count is 0 the resource is unlocked
+
+Reentrant Lock method
+
+1.lock
+2.unlock
+3.tryLock
+4.tryLock
+5.lockInterruptibly()

@@ -1,0 +1,42 @@
+java synchronization  provides capabilities to control the access of multiple threads to any shared resource
+
+Why????
+
+
+1.To prevent interferences from multiple threads
+2.To avoid consistency issues
+
+Thread Syncronization
+
+type::
+
+1. Mutual Exclusive
+->Synchronized method
+->Synchronized block
+->Static synchronization
+2.Cooperation(Inter-thread communication)
+->wait
+->notify
+->notifyAll
+
+
+Mutual Exclusive
+
+
+Synchronization is the modifier in java which is used for mutual exclusive lock. With the help of
+synchronization modifier we can restrict a shared resource to be accessed by only one thread .
+
+Three are three ways to use synchronized modifier:
+
+1. Synchronized method:
+2.Synchronized block
+3.static synchronization
+
+
+If an  object or a block is declared as synchronized than only one thread can access that object or block
+at a time. No other thread can take the object or block until it is available
+
+Intrinsic Lock
+
+Every object in JVM has internally a lock.
+Synchronized keyword tries to acquire the lock of the target object

@@ -1,0 +1,19 @@
+DeadLock
+
+It is a situation in which threads are waiting for each other to release the lock
+There may be situation where thread is waiting for an object lock,
+that is accquired by another thread and second thread is waiting for an object lock that is accquired by first thread
+Since both threads are waiting for each other to release the lock the condition is called deadlock
+
+LiveLock
+
+It is like deadlock in the sense that two or more processes are blocking each other but with livelock
+each process is actively trying to resolve the problem on its own like reverting back or retry .
+A livelock happens when the combination of these processes efforts to resolve the problem make it impossible
+for them to ever terminate
+
+An example of livelock
+a husband and wife are trying to eat soup but only have one spoon between them Each spouse  is too polite
+and will pass the spoon if the other has not yeteaten
+
+two people attempting to pass each other in corridor
