@@ -1,0 +1,4 @@
+The java BlockingQueue Interface java.util.concurrent.BlockingQueue, represents a queue
+which is thread safe to put element into, and take elements out of from. In other
+words, multiple threads can be inserting queue and taking elements(deque)
+concurrently from a JAVA BlockingQueue, without any concurrency issues arising

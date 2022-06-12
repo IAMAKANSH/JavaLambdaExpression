@@ -1,0 +1,5 @@
+It is synchronization aid that allows a set of threads to wait  for each other to reach a common barrier point
+The thread who reached the barrier point has to wait for other thread to reach
+As soon as  all the threads reached the barrier point all of them are released
+
+
